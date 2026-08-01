@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive 2D Human Anatomy Model - Explore the human body step-by-step or in 4 key anatomical frames.">
+    <title>Interactive Human Anatomy Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated background particles -->
+    <div class="bg-particles" id="bgParticles"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-glow"></div>
+        <h1 class="header-title">
+            <span class="title-icon">🧬</span>
+            Human Anatomy Explorer
+            <span class="title-icon">🔬</span>
+        </h1>
+        <p class="header-subtitle">Explore anatomical layers one-by-one or via 4 isolated key frames</p>
+    </header>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <!-- Control Panel -->
+        <aside class="control-panel" id="controlPanel">
+            <!-- Mode Switcher Tabs -->
+            <div class="mode-switcher-container">
+                <button class="mode-tab active" id="tabModeDetailed">
+                    <span class="tab-icon">🔢</span> Step-by-Step (13)
+                </button>
+                <button class="mode-tab" id="tabModeKeyframe">
+                    <span class="tab-icon">🖼️</span> 5 Key Frames
+                </button>
+            </div>
+
+            <div class="panel-header">
+                <h2 class="panel-title" id="panelTitle">Detailed System Slider</h2>
+                <p class="panel-desc" id="panelDesc">Drag the sliding circle to reveal anatomical structures sequentially.</p>
+            </div>
+
+            <!-- Slider Control Container -->
+            <div class="slider-section">
+                <div class="active-stage-card" id="activeStageCard">
+                    <div class="stage-badge" id="stageBadge">Stage 1 of 13</div>
+                    <div class="stage-icon" id="stageIcon">🦴</div>
+                    <h3 class="stage-title" id="stageTitle">Skeleton</h3>
+                    <p class="stage-description" id="stageDescription">The foundational bone framework supporting the entire human structure.</p>
+                </div>
+
+                <!-- Range Slider Control -->
+                <div class="slider-wrapper">
+                    <div class="slider-labels-top">
+                        <span id="sliderMinLabel">🦴 Skeleton</span>
+                        <span id="sliderMaxLabel">🧑 Full Body</span>
+                    </div>
+                    <div class="slider-track-container">
+                        <input type="range" min="1" max="13" value="1" step="1" id="anatomySlider" class="anatomy-slider">
+                        <div class="slider-track-fill" id="sliderTrackFill"></div>
+                    </div>
+                    <div class="slider-controls-row">
+                        <button class="step-btn" id="btnPrevStage" title="Previous Layer">◀ Prev</button>
+                        <button class="play-btn" id="btnAutoPlay" title="Auto Play Journey">▶ Auto Play</button>
+                        <button class="step-btn" id="btnNextStage" title="Next Layer">Next ▶</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- List of Progressive Stages -->
+            <div class="stages-list-section">
+                <h3 class="group-title">
+                    <span class="group-icon">📑</span> Stage Sequence
+                </h3>
+                <div class="stages-timeline" id="stagesTimeline"></div>
+            </div>
+        </aside>
+
+        <!-- Body Viewer -->
+        <section class="body-viewer" id="bodyViewer">
+            <div class="viewer-container" id="viewerContainer">
+                <!-- Body part images will be injected here by JS -->
+            </div>
+
+            <!-- Hover tooltip -->
+            <div class="part-tooltip" id="partTooltip"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Interactive Human Anatomy Explorer &mdash; Educational Tool</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

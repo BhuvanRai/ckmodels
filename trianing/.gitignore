@@ -1,0 +1,59 @@
+# ==========================================
+# Datasets & Large Data Archives
+# ==========================================
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+# Dataset Archives and Extracted Directories
+archive/
+archive (1)/
+archive*/
+archive*.zip
+extracted_archive/
+yolo_formatted_dataset/
+Skin disease.v1i.folder/
+dataset/
+datasets/
+data/
+
+# CSV, TSV and Raw Data Arrays
+*.csv
+*.tsv
+*.npz
+*.npy
+*.h5
+*.hdf5
+
+# ==========================================
+# Training Outputs & Logs
+# ==========================================
+runs/
+bone_fracture_project/
+brain_tumor_project/
+*.log
+
+# ==========================================
+# Python & Environment Cache
+# ==========================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ==========================================
+# IDE & System Files
+# ==========================================
+.vscode/
+.idea/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db

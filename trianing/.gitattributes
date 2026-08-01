@@ -1,0 +1,9 @@
+# Auto detect text files and perform LF -> CRLF normalization on Windows
+* text=auto
+
+# Keep scripts and markdown consistent
+*.py text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
